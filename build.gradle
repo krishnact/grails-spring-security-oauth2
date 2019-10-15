@@ -70,7 +70,7 @@ publishing {
 			url = "https://maven.pkg.github.com/binxhealth/grails-spring-security-oauth2"
 			credentials {
 				username "${gprUser ?: System.getenv('GPR_USER')}"
-				username "${gprUser ?: System.getenv('GPR_USER')}"
+				password "${gprApiToken ?: System.getenv('GPR_API_TOKEN')}"
 			}
 		}
 	}
