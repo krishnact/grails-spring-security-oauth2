@@ -1,3 +1,5 @@
+
+
 Spring Security OAuth2 Plugin
 =======
 
@@ -8,3 +10,8 @@ the official plugin will be updated for Grails 4 soon.
 
 See the [official plugin README](https://github.com/grails-plugins/grails-spring-security-oauth2)
 for documentation.
+
+How to build?
+
+gradlew build publishToMavenLocal 
+
