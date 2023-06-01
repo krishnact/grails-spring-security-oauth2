@@ -2,6 +2,7 @@
 
 Spring Security OAuth2 Plugin
 =======
+[![Java CI](https://github.com/grails/grails-spring-security-oauth2/actions/workflows/gradle.yml/badge.svg)](https://github.com/grails/grails-spring-security-oauth2/actions/workflows/gradle.yml)
 
 This a temporary fork of [yohannrub](https://github.com/yohannrub/grails-spring-security-oauth2)'s
 fork of the Grails Spring Security OAuth2 plugin, containing their Grails 4
