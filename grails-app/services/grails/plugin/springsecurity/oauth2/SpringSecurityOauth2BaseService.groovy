@@ -195,7 +195,7 @@ class SpringSecurityOauth2BaseService {
     /**
      * @return The uri pointing to the page ask to link or create account
      */
-    def getAskToLinkOrCreateAccountUri() {
+    String getAskToLinkOrCreateAccountUri() {
         def askToLinkOrCreateAccountUri = grailsApplication.config.grails.plugin.springsecurity.oauth2.registration.askToLinkOrCreateAccountUri ?: '/oauth2/ask'
         return askToLinkOrCreateAccountUri
     }
@@ -232,7 +232,6 @@ class SpringSecurityOauth2BaseService {
             }
         }
     }
-
     /**
      * @return The OAuthID class name
      */
@@ -240,6 +239,7 @@ class SpringSecurityOauth2BaseService {
         def domainClass = grailsApplication.config.grails.plugin.springsecurity.oauth2.domainClass ?: 'OAuthID'
         return domainClass
     }
+
 
     /**
      * @return The OAuthID class

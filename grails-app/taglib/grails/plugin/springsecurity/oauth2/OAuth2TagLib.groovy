@@ -17,9 +17,11 @@ package grails.plugin.springsecurity.oauth2
 import com.github.scribejava.core.model.OAuth2AccessToken
 import grails.plugin.springsecurity.SpringSecurityService
 import org.grails.taglib.GrailsTagException
+import org.springframework.beans.factory.annotation.Value
 
 class OAuth2TagLib {
-
+    @Value('${grails.plugin.springsecurity.oauth2.controllerName}')
+    String controllerName
     static namespace = "oauth2"
 
     SpringSecurityOauth2BaseService springSecurityOauth2BaseService
@@ -33,7 +35,7 @@ class OAuth2TagLib {
         if (!provider) {
             throw new GrailsTagException('No provider specified for <oauth2:connect /> tag. Try <oauth2:connect provider="your-provider-name" />')
         }
-        Map a = attrs + [url: [controller: 'springSecurityOAuth2', action: 'authenticate', params: [provider: provider]]]
+        Map a = attrs + [url: [controller: controllerName, action: 'authenticate', params: [provider: provider]]]
         out << g.link(a, body)
     }
 

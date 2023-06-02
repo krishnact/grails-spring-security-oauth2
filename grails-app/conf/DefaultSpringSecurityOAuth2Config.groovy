@@ -25,6 +25,9 @@
 security {
     oauth2 {
         active = true
+        controllerName = 'springSecurityOAuth2'
+        controllerName2= 'grailsSocialOAuth2'
+        useTransaction = true
         registration {
             askToLinkOrCreateAccountUri = '/oauth2/ask'
             roleNames = ['ROLE_USER']

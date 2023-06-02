@@ -23,6 +23,7 @@ class OAuth2TagLibSpec extends Specification implements TagLibUnitTest<OAuth2Tag
         def springSecurityService = Mock(SpringSecurityService)
         springSecurityService.isLoggedIn() >> {true}
         def springSecurityOauth2BaseService = Mock(SpringSecurityOauth2BaseService)
+        def controllerName = 'grailsSocialOAuth2'
         springSecurityOauth2BaseService.sessionKeyForAccessToken(provider) >> {'OAuth2: access - t:' + provider}
         session[springSecurityOauth2BaseService.sessionKeyForAccessToken(provider)] = new OAuth2AccessToken("${provider}_token", "${provider}_rawResponse=rawResponse")
 
