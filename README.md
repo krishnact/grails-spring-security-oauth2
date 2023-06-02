@@ -16,18 +16,20 @@ It separates Oauth storage from controller. Current plugin assumes that storage 
 See the [official plugin README](https://github.com/grails/grails-spring-security-oauth2.git) for documentation.
 
 How to build and install locally?
+```
 git clone https://github.com/krishnact/grails-spring-security-oauth2
 cd grails-spring-security-oauth2
 git switch 2.0.x
 gradlew -DskipTests build publishToMavenLocal
-
+```
 How to use?
 1. Add this dependency in project
 ```groovy
 implementation 'org.himalay.grails.plugins:spring-security-oauth:2.0.0-SNAPSHOT'
 ```
 Also, you may need to add mavenLocal() depenency in your project if you want to use locally built version of this 
-plugin.
+plugin. Make sure to add mavenLocal() before mavenCentral().
+
 
 2. Then make sure that to exclude original plugin from provider specific plugins as shown below for Google plugin,
 if not then GrailsSocialOAuth2Controller does not get registered as a GrailsController:
