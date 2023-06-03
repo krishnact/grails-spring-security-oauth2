@@ -19,7 +19,7 @@ How to build and install locally?
 ```
 git clone https://github.com/krishnact/grails-spring-security-oauth2
 cd grails-spring-security-oauth2
-git switch 2.0.x
+git checkout 2.0.x
 gradlew -DskipTests build publishToMavenLocal
 ```
 How to use?
