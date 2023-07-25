@@ -1,4 +1,7 @@
+## Please use 2.x.x branch for new Grails Versions.
 
+https://github.com/krishnact/grails-spring-security-oauth2/tree/2.0.x
+=======
 
 Spring Security OAuth2 Plugin
 =======
